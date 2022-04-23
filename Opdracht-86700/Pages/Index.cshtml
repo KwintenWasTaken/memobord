@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "86700 - Memobord";
+}
+
+<h2 class="text-center m-3">86700 - Memobord</h2>
+
+<div class="d-flex justify-content-center">
+    <div class="memobord-container m-3">
+        <div class="container-2-divs d-flex justify-content-center">
+            <div class="container-settings rounded shadow mr-1 p-3">
+
+                <!-------------------------------------------------------->
+
+                <table class="table table-responsive">
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <h5>Titel</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Titel:</label>
+                        </td>
+                        <td>
+                            <input type="text" maxlength="20" class="bg-light border rounded" id="titelInvoer" placeholder="Vul een titel in..." />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Kleur:</label>
+                        </td>
+                        <td>
+                            <input type="color" class="bg-light border rounded w-100" id="kleurTitel" value="#212529" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Grootte:</label>
+                        </td>
+                        <td>
+                            <input type="range" min="16" max="36" value="16" step="1" class="bg-light border rounded w-100" id="grootteTitel" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Achtergrond:</label>
+                        </td>
+                        <td>
+                            <input type="color" class="bg-light border rounded w-100" id="kleurAchtergrond" value="#ffffff" />
+                        </td>
+                    </tr>
+                </table>
+
+                <!-------------------------------------------------------->
+
+                <table class="table table-responsive">
+                    <tr>
+                        <th colspan="2" class="text-center">
+                            <h5>Memo</h5>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Tekst:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="memoTekst" maxlength="24" placeholder="Kies eerst een memo..." disabled />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 200px;">
+                            <label>Kleur:</label>
+                        </td>
+                        <td>
+                            <input type="color" class="bg-light border rounded w-100" id="kleurMemo" value="#F8F8F8" disabled />
+                        </td>
+                    </tr>
+                </table>
+
+
+                <hr /> <!-------------------------------------------------------->
+
+
+                <p>
+                    <button id="addKnop" class="btn btn-light btn-sm border rounded">Nieuw memo</button>
+                    <button id="deleteKnop" class="btn btn-light btn-sm border rounded">Verwijder memo</button>
+                </p>
+
+
+                <p>
+                    <button id="dragKnop" class="btn btn-light btn-sm border rounded">Memo's slepen</button>
+                    <button id="fixedKnop" class="btn btn-light btn-sm border rounded">Memo's vaste positie</button>
+                </p>
+
+
+                <hr /> <!-------------------------------------------------------->
+
+
+                <p>
+                    <button id="readKnop" class="btn btn-light btn-sm border rounded">Inlezen</button>
+                    <button id="saveKnop" class="btn btn-light btn-sm border rounded">Opslaan</button>
+                </p>
+
+
+            </div>
+
+            <!-- memobord -->
+
+            <div class="container-memo rounded shadow ml-1" id="veld" style="background-color: #fff;">
+
+                <div id="titel" class="text-center mt-3 mb-3" style="color: #212529;"></div>
+
+                <div class="d-flex flex-wrap align-content-start" id="memoveld"></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
